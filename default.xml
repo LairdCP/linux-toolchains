@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="origin" fetch="ssh://git@git.devops.lairdtech.com/" />
+
+  <default remote="origin" revision="master" />
+
+  <project path="crosstool-ng"
+           name="CP_linux/crosstool-ng.git"
+           remote="origin" revision="master" />
+
+  <project path="toolchains"
+           name="CP_linux/toolchains.git"
+           remote="origin" revision="master" />
+
+
+</manifest>
