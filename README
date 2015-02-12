@@ -1,0 +1,2 @@
+repo init -u git@git.devops.lairdtech.com:CP_linux/toolchains.git
+repo sync
