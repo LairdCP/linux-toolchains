@@ -7,11 +7,13 @@
 
   <project path="crosstool-ng"
            name="CP_linux/crosstool-ng.git"
-           remote="origin" revision="master" />
+           remote="origin" revision="1.20" />
 
   <project path="toolchains"
            name="CP_linux/toolchains.git"
-           remote="origin" revision="master" />
+           remote="origin" revision="master" >
+    <copyfile src="root.Makefile" dest="Makefile" />
+  </project>
 
 
 </manifest>
