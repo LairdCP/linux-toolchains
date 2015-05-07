@@ -37,6 +37,19 @@ i586-laird-linux-gnu.tar.bz2: output/i586-laird-linux-gnu
 	cd output && tar cjf $@ $(<F)
 	cp output/$@ .
 
+
+output/arm-none-eabi: output archive ct-ng.stamp
+	mkdir -p working/$(@F)
+	cp toolchains/$(@F).config_defconfig working/$(@F)/defconfig
+	cd working/$(@F) && ../../crosstool-ng/ct-ng defconfig
+	cd working/$(@F) && ../../crosstool-ng/ct-ng build
+
+arm-none-eabi.tar.bz2: output/arm-none-eabi
+	cd output && tar cjf $@ $(<F)
+	cp output/$@ .
+
+samba: arm-none-eabi.tar.bz2
+
 wb-arm: arm-laird-linux-gnueabi.tar.bz2
 
 msd-x86: i586-laird-linux-gnu.tar.bz2
