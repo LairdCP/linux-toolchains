@@ -1,2 +1,16 @@
-repo init -u git@git.devops.lairdtech.com:CP_linux/toolchains.git
-repo sync
+
+## Setup: ##
+
+This project uses Repo because it is a composite project. There is a defeault.xml in this
+repository that is used to actually get this and our crosstool-ng repositories, both of
+which are needed to create the build environment and also to
+    repo init -u git@git.devops.lairdtech.com:CP_linux/toolchains.git
+    repo sync
+
+## Building: ##
+
+To just build all the toolchains:
+
+    make
+
+##
