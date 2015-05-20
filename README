@@ -13,4 +13,15 @@ To just build all the toolchains:
 
     make
 
+To just build the WB/MSD arm toolchain:
+    make wb-arm
+
+
+## Experimenting: ##
+
+To try different toolchain configurations:
+    cd working/<toolchain_name>
+    ../../crosstool-ng/ct-ng menuconfig
+    ../../crosstool-ng/ct-ng build
+
 ##
