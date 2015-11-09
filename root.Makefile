@@ -11,11 +11,11 @@ ifneq ($(strip $(shell \
 	GIT_DIRTY := +
 endif
 
-# Release builds will have a release version # set via LARID_RELEASE in the passed
+# Release builds will have a release version # set via LAIRD_RELEASE in the passed
 # environment if this is a release build. If not, then we'll make the version number
 # just today's date.
-ifdef LARID_RELEASE
-	VERSION := $(LARID_RELEASE)-$(GIT_VER)$(GIT_DIRTY)
+ifdef LAIRD_RELEASE
+	VERSION := $(LAIRD_RELEASE)-$(GIT_VER)$(GIT_DIRTY)
 	VERSION_STR = Laird $(<F) release $(VERSION)
 else
 	VERSION :=  $(shell date +%Y%m%d)-$(GIT_VER)$(GIT_DIRTY)
