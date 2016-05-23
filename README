@@ -81,11 +81,11 @@ toolchain.
 
 So, as of the time of this writing, the base release version number will be:
 
-    3.5.2.d
+	3.5.2.d
 
 A full release version number would be initiated by making like this:
 
-    make LAIRD_RELEASE=3.5.2.0 wb-arm
+	make LAIRD_RELEASE=3.5.2.0 wb-arm
 
 Which would result in a full version: `3.5.2.0-6dd41768`
 
