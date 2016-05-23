@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="origin" fetch="https://github.com/LairdCP/" />
+  <remote  name="github" fetch="https://github.com/" />
+
+  <default remote="origin" revision="master" />
+
+  <project path="crosstool-ng"
+           name="crosstool-ng/crosstool-ng.git"
+           remote="github" revision="1.20" />
+
+  <project path="toolchains"
+           name="linux-toolchains.git">
+    <copyfile src="root.Makefile" dest="Makefile" />
+  </project>
+
+
+</manifest>
